@@ -1,13 +1,20 @@
 /*---- To delete the top and aside spaces ----*/
 body{
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* ---- HEADER SECTION -------*/
 .header{
     margin: px 0px;
     text-align: center;
-    background-color: aqua;
+    background-color: rgba(6, 103, 103, 0.475);
     height: 250px;
     width: auto;
     
@@ -24,7 +31,7 @@ h1 {
     font-size: 20px;
 }
 
-ul{
+.ul-header{
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -46,18 +53,26 @@ a:hover{
 
 /*---- MAIN SECTION -- */
 main{
-    background-color: #D3D3D3;
-    padding: 50px;
+    background-color: #d3d3d37a;
+    margin: 0;
+    padding: 0;
 }
 
     /*---- para acomodar los divs---*/
 section{
-    display: flex;
-    flex-wrap: wrap;
+  display: grid;
+    grid-template-columns: repeat(3, 300px);
     gap: 20px;
+    padding: 50px;
     justify-content: center;
 }
 
+.texto-inicio{
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding-top: 50px;
+}
 
 /*---- PRODUCTS SECTION - DIVS ----*/
 .contenedores-productos{
@@ -77,7 +92,7 @@ section{
      transition: 0.3s;
 }
 
-.contenedores-productos{
+.contenedores-productos:hover{
     transform: translateY(-8px);
     box-shadow: 0px 10px 20px rgba(0,0,0,.15);
     cursor: pointer;
@@ -124,4 +139,47 @@ section{
     background-color: rgb(14,70,135);
 }
 
+/**** para ocultar la descripcion de cada div de los productos*/
+.descripcion{
+    display:none;
+    position: relative;
+    flex-direction: column;
+    gap: 10px; /* separación entre texto y botón */
+    padding: 15px;
+    overflow-y: auto;
+}
 
+.descripcion p{
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.descripcion button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* ---- FOOTER ------*/
+footer{
+    width: 100%;
+    height: 80px;
+    background-color:  #d3d3d3dc;
+    padding-top: 35px;
+}
+
+.ul-footer{
+    display: flex;
+    list-style: none;
+    gap: 80px;
+    font-size: 18px;
+    justify-content: center;
+}
